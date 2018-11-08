@@ -28,17 +28,25 @@ button.addEventListener('click', function () {
     document.body.appendChild(button);
 });*/
 document.addEventListener('DOMContentLoaded', function () {
-    var input = prompt('меню');  
-    var ul = document.createElement('ul')
-        function generateMenu(input) {
-            for( var i = 0; i < input; i++){
+    var input = prompt('меню');
+
+    var ul = document.createElement('ul');
+        function generate(input) {
+            for(  var i = 0;  i < input; ){
                 var li = document.createElement('li');
+
                 var p = document.createElement('p');
                 ul.appendChild(li);
                 li.appendChild(p);
-                li.style = 'background-color:green;';
+                p.innerText = i++;
+                p.style = 'text-align:center; padding-top:25px;'
+                li.style = 'border:1px solid; border-radius:50%; width:100px; height:100px;display:inline-block;margin-bottom:10px; margin-right:10px;';
             }
     }
+
     document.body.appendChild(ul);
-    generateMenu(input);
+    generate(input);
+
+
 })
+
