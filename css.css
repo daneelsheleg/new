@@ -1,0 +1,9 @@
+body{
+	font-family: sans-serif;
+
+}
+.zero{
+	justify-content: center;
+	display: flex;
+	flex-direction: row
+}
